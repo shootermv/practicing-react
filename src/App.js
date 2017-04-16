@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import { ReposList } from './ReposList';
 import { TopBar } from './TopBar';
 import { SideBar } from './SideBar';
+import { Router, Route, hashHistory } from 'react-router';
 import './App.css';
 
 class App extends Component {
@@ -14,12 +15,16 @@ class App extends Component {
     this.setState({ open: !this.state.open });
   }
   render() {
+    //<ReposList repos={['angular', 'materializecss']}></ReposList>
     let toggle = this.toggle.bind(this);
     return (
       <div className="App">
         <SideBar open={this.state.open}></SideBar>
         <TopBar onToggle={toggle}></TopBar>
-        <ReposList repos={['angular', 'materialzecss']}></ReposList>
+        <Router history={hashHistory}>
+          <Route path="/" component={ReposList} />
+
+        </Router>
       </div>
     );
   }
