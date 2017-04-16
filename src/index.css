@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+aside{
+  background:light-blue;
+  position:fixed;
+  width:120px;
+  height:300px;
+  left:0px;
+}
+.hidden{
+  display:none;
+}
