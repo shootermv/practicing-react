@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import { ReposList } from './ReposList';
 import { TopBar } from './TopBar';
 import { SideBar } from './SideBar';
+import { Search } from './Search';
 import { Router, Route, hashHistory } from 'react-router';
 import './App.css';
 
@@ -23,7 +24,7 @@ class App extends Component {
         <TopBar onToggle={toggle}></TopBar>
         <Router history={hashHistory}>
           <Route path="/" component={ReposList} />
-
+          <Route path="/search" component={Search} />
         </Router>
       </div>
     );
