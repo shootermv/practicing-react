@@ -11,9 +11,9 @@ export class TopBar extends Component {
     render() {
         let toggle = this.props.onToggle;
         return (
-            <nav className="List" >
+            <nav className="List">
                 <button onClick={toggle} style={{ fontSize: '24px' }}>۞</button>
-            </nav >
+            </nav>
         );
     }
 }

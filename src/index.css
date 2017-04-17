@@ -7,9 +7,21 @@ aside{
   background:lightblue;
   position:fixed;
   width:120px;
-  height:300px;
+  height:100%;
   left:0px;
 }
 .hidden{
   display:none;
+}
+nav{
+  background:darkblue;
+  color:#fff;
+  display:flex;
+}
+nav button{
+  align-self: flex-start;
+  
+}
+.layout-open{
+  margin-left:120px;
 }

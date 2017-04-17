@@ -4,7 +4,8 @@ import { ReposList } from './ReposList';
 import { TopBar } from './TopBar';
 import { SideBar } from './SideBar';
 import { Search } from './Search';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import Main from './Main';
 import './App.css';
 
 class App extends Component {
@@ -19,14 +20,14 @@ class App extends Component {
     //<ReposList repos={['angular', 'materializecss']}></ReposList>
     let toggle = this.toggle.bind(this);
     return (
-      <div className="App">
-        <SideBar open={this.state.open}></SideBar>
-        <TopBar onToggle={toggle}></TopBar>
-        <Router history={hashHistory}>
-          <Route path="/" component={ReposList} />
+
+      <Router history={hashHistory}>
+        <Route path="/" component={Main} >
+          <IndexRoute component={ReposList} />
           <Route path="/search" component={Search} />
-        </Router>
-      </div>
+        </Route>
+      </Router>
+
     );
   }
 }

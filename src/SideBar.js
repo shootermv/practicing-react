@@ -13,6 +13,7 @@ export class SideBar extends Component {
         let isOpen = open ? 'hidden' : '';
         return (
             <aside className={"sideBar " + isOpen} >
+                <img src={logo} className="App-logo" alt="logo" />
                 <button style={{ fontSize: '24px' }}>first</button>
                 <button style={{ fontSize: '24px' }}>second</button>
             </aside>
