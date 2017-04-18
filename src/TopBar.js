@@ -12,7 +12,7 @@ export class TopBar extends Component {
         let toggle = this.props.onToggle;
         return (
             <nav className="List">
-                <button onClick={toggle} style={{ fontSize: '24px' }}>۞</button>
+                <button onClick={toggle} ><span className="glyphicon glyphicon-menu-hamburger"></span></button>
             </nav>
         );
     }

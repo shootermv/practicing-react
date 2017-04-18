@@ -14,8 +14,10 @@ export class SideBar extends Component {
         return (
             <aside className={"sideBar " + isOpen} >
                 <img src={logo} className="App-logo" alt="logo" />
-                <button style={{ fontSize: '24px' }}>first</button>
-                <button style={{ fontSize: '24px' }}>second</button>
+                <ul className="nav nav-pills nav-stacked">
+                    <li><a href="#/">Favorite Repos</a></li>
+                    <li><a href="#/search">Search Repo</a></li>
+                </ul>
             </aside>
         );
     }
