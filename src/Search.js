@@ -11,7 +11,9 @@ export class Search extends Component {
     render() {
 
         return (
-            <div>Here will Come Search</div>
+            <div className="container">
+                Here Will Come Serach Page
+            </div>
         );
     }
 }

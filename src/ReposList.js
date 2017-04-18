@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-
+import { Repo } from './Repo';
 
 
 export class ReposList extends Component {
 
     render() {
         let { repos } = { repos: ['angular', 'materializecss'] };
-        console.log('REPOS:', repos)
+
         return (
-            <ul className="List" >
-                {repos.map(repo => <li key={repo}>{repo}</li>)}
-            </ul>
+            <div className="container list-container">
+                <div className="row">
+                    {repos.map(repo => <Repo key={repo} repo={repo}></Repo>)}
+                </div>
+            </div>
         );
     }
 }
